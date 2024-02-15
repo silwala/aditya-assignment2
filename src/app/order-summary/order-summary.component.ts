@@ -10,9 +10,7 @@ import {Router} from "@angular/router";
 export class OrderSummaryComponent {
 
   title = "Order Summary";
-  // cupcake : Cupcake;
   constructor(private service : CupcakeService, private  router: Router) {
-    // this.cupcake = service.cupcake;
   }
 
   quantity = this.service.cupcake.amount;
