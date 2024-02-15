@@ -3,6 +3,7 @@ import {Cupcake} from "../cupcake";
 import {CupcakeService} from "../cupcake.service";
 import {CupcakeFlavor} from "../cupcake-flavor";
 import {Router} from "@angular/router";
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-choose-flavor',
@@ -11,12 +12,16 @@ import {Router} from "@angular/router";
 })
 export class ChooseFlavorComponent {
 
+  title = 'Choose Flavor';
   cupcake : Cupcake;
+  cupcakeFlavors = [CupcakeFlavor.VANILLA, CupcakeFlavor.CHOCOLATE, CupcakeFlavor.RED_VELVET, CupcakeFlavor.SALTED_CARAMEL, CupcakeFlavor.COFFEE]
   cupcakeFlavor : CupcakeFlavor = CupcakeFlavor.VANILLA;
-  constructor(private service : CupcakeService, private  router: Router) {
+  price : string | null = this.service.cupcake.price.toString();
+  constructor(private service : CupcakeService, private  router: Router, private currency : CurrencyPipe) {
     this.cupcake = service.cupcake;
+    this.price = this.currency.transform( this.price,'USD', 'symbol', '1.2-2');
   }
-    price = this.service.cupcake.price;
+
 
   onCancel(){
     this.router.navigate(['/order-cupcake']);

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Cupcake} from "../cupcake";
 import {CupcakeService} from "../cupcake.service";
 
+
 @Component({
   selector: 'app-order-cupcake',
   templateUrl: './order-cupcake.component.html',
@@ -9,6 +10,7 @@ import {CupcakeService} from "../cupcake.service";
 })
 export class OrderCupcakeComponent {
 
+  title = 'Order Cupcake';
   cupcake : Cupcake = new Cupcake();
 
   constructor(private service: CupcakeService) {
