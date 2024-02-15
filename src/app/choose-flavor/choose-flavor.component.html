@@ -1,0 +1,11 @@
+<p>choose-flavor works!</p>
+<label><input type="radio" name="cupcakeFlavor" [value]="CupcakeFlavor.VANILLA" [(ngModel)]="cupcakeFlavor" checked> Vanilla</label>
+<label><input type="radio" name="cupcakeFlavor" [value]="CupcakeFlavor.CHOCOLATE" [(ngModel)]="cupcakeFlavor">  Chocolate</label>
+<label><input type="radio" name="cupcakeFlavor" [value]="CupcakeFlavor.RED_VELVET" [(ngModel)]="cupcakeFlavor"> Red Velvet</label>
+<label><input type="radio" name="cupcakeFlavor" [value]="CupcakeFlavor.SALTED_CARAMEL" [(ngModel)]="cupcakeFlavor"> Salted Caramel</label>
+<label><input type="radio" name="cupcakeFlavor" [value]="CupcakeFlavor.COFFEE" [(ngModel)]="cupcakeFlavor"> Coffee</label>
+<p>Price : {{price}}</p>
+
+<button (click)="onCancel()">Cancel</button>
+<button routerLink="/order-summary" (click)="onClickNext()">Next</button>
+
