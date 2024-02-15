@@ -15,12 +15,12 @@ export class ChooseFlavorComponent {
   title = 'Choose Flavor';
   cupcake : Cupcake;
   cupcakeFlavors = [CupcakeFlavor.VANILLA, CupcakeFlavor.CHOCOLATE, CupcakeFlavor.RED_VELVET, CupcakeFlavor.SALTED_CARAMEL, CupcakeFlavor.COFFEE]
-  cupcakeFlavor : CupcakeFlavor = CupcakeFlavor.VANILLA;
   price : string | null = this.service.cupcake.price.toString();
   constructor(private service : CupcakeService, private  router: Router, private currency : CurrencyPipe) {
     this.cupcake = service.cupcake;
     this.price = this.currency.transform( this.price,'USD', 'symbol', '1.2-2');
   }
+  cupcakeFlavor : CupcakeFlavor = this.service.cupcake.cupcakeFlavor;
 
 
   onCancel(){

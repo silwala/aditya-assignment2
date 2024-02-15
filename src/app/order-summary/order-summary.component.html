@@ -1,4 +1,32 @@
-<p>order-summary works!</p>
-<p>Quantity: {{quantity}} cupcakes</p>
-<p>Flavor: {{ flavor}}</p>
-<p>Subtotal: ${{price}}</p>
+<mat-toolbar color="primary" style="margin-bottom: 15px">
+  <button (click)="onGoBack()" mat-icon-button aria-label="back button">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<div class="order-summary-container">
+<div class="order-summary">
+  <img class="cupcake-image" ngSrc="assets/images/cupcake-image.png" alt="cupcake image" height="1619" width="1500">
+  <p>Quantity: {{quantity}} cupcakes</p>
+<!--  <mat-divider></mat-divider>-->
+  <p>Flavor: {{ flavor}}</p>
+<!--  <mat-divider></mat-divider>-->
+  <p>Subtotal: ${{price}}</p>
+</div>
+<!--  <mat-divider></mat-divider>-->
+  <div class="buttons">
+  <button mat-flat-button color="warn" (click)="onCancel()">Cancel</button>
+  <button mat-flat-button color="primary" routerLink="/order-summary">Order</button>
+  </div>
+</div>
+
+
+
+<!--<p>Quantity: {{quantity}} cupcakes</p>-->
+<!--<mat-divider></mat-divider>-->
+<!--<p>Flavor: {{ flavor}}</p>-->
+<!--<mat-divider></mat-divider>-->
+<!--<p>Subtotal: ${{price}}</p>-->
+<!--<mat-divider></mat-divider>-->
+
