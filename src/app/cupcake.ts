@@ -4,5 +4,8 @@ export class Cupcake {
 
   amount : number = 1;
   cupcakeFlavor: CupcakeFlavor = CupcakeFlavor.VANILLA;
-  price: number = 2;
+  pricePerCupcake = 2;
+  get price(): number {
+    return this.pricePerCupcake * this.amount;
+  }
 }
