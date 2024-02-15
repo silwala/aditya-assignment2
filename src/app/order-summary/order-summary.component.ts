@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Cupcake} from "../cupcake";
 import {CupcakeService} from "../cupcake.service";
 import {Router} from "@angular/router";
 
