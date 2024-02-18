@@ -3,14 +3,27 @@
   width: auto;
 }
 
-.order-page-content{
+.order-page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-page{
+  font-size: 1.5em;
+  background-color: #e9e0ff;
+  margin-top: 20px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding-top: 20px;
-
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px #d3caf5,
+  2px 2px 5px inset #ffffff;
 }
 
 button{

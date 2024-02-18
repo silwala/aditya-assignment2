@@ -2,11 +2,12 @@
   <span>{{ title }}</span>
 </mat-toolbar>
 
-<div class="order-page-content">
+<div class="order-page-container">
+  <div class="order-page">
 <img class="cupcake-image" ngSrc="assets/images/cupcake-image.png" alt="cupcake image" height="1619" width="1500">
 
 <button mat-flat-button color="primary"  routerLink="/choose-flavor" (click)="onSetAmount(1)">One Cupcake</button>
 <button mat-flat-button color="primary"   routerLink="/choose-flavor" (click)="onSetAmount(6)">Six Cupcakes</button>
 <button mat-flat-button color="primary"  routerLink="/choose-flavor" (click)="onSetAmount(12)">Twelve Cupcakes</button>
-
+  </div>
 </div>
