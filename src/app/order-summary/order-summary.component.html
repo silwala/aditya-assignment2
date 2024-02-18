@@ -10,7 +10,7 @@
   <img class="cupcake-image" ngSrc="assets/images/cupcake-image.png" alt="cupcake image" height="1619" width="1500">
   <p>Quantity: {{quantity}} cupcakes</p>
   <p>Flavor: {{ flavor}}</p>
-  <p>Subtotal: ${{price}}</p>
+  <p>Subtotal: {{price | currency: 'CAD'}}</p>
 </div>
   <div class="buttons">
   <button mat-flat-button color="warn" (click)="onCancel()">Cancel</button>
