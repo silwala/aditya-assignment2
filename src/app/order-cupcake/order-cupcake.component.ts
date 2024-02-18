@@ -18,7 +18,6 @@ export class OrderCupcakeComponent {
 
   onSetAmount(amount: number){
     this.cupcake.amount = amount;
-    console.log(this.cupcake.price);
     this.service.getCupcake(this.cupcake);
 
   }

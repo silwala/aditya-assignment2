@@ -10,13 +10,12 @@ import {Router} from "@angular/router";
 export class OrderSummaryComponent {
 
   title = "Order Summary";
-  constructor(private service : CupcakeService, private  router: Router) {
-  }
-
+  price = this.service.cupcake.price;
   quantity = this.service.cupcake.amount;
   flavor = this.service.cupcake.cupcakeFlavor;
-  price = this.service.cupcake.price;
 
+  constructor(private service : CupcakeService, private  router: Router) {
+  }
 
   onGoBack(){
     this.router.navigate(['/choose-flavor']);

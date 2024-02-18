@@ -14,11 +14,12 @@ export class ChooseFlavorComponent {
   title = 'Choose Flavor';
   cupcake : Cupcake;
   cupcakeFlavors = [CupcakeFlavor.VANILLA, CupcakeFlavor.CHOCOLATE, CupcakeFlavor.RED_VELVET, CupcakeFlavor.SALTED_CARAMEL, CupcakeFlavor.COFFEE]
-  price : string | null = this.service.cupcake.price.toString();
+  price  = this.service.cupcake.price;
+  cupcakeFlavor : CupcakeFlavor = this.service.cupcake.cupcakeFlavor;
+
   constructor(private service : CupcakeService, private  router: Router) {
     this.cupcake = service.cupcake;
   }
-  cupcakeFlavor : CupcakeFlavor = this.service.cupcake.cupcakeFlavor;
 
 
   onCancel(){
